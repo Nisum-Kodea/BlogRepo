@@ -34,7 +34,7 @@ public class BlogView {
 	@Autowired
 	private INewsRepository newsPersistence;
 
-	@RequestMapping(value = "/blog", method = RequestMethod.GET)
+	@RequestMapping(value = {"/","/blog"}, method = RequestMethod.GET)
 	public ModelAndView blog() {
 
 		System.out.println("In the blog..............");
@@ -87,7 +87,7 @@ public class BlogView {
 							+ "                \"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea \" +\n"
 							+ "                \"commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil \" +\n"
 							+ "                \"molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"");
-			new2.setAuthor(new Author("Diego Montaña", "diegomontana@gmail.com", 2));
+			new2.setAuthor(new Author("Diego MontaÃ±a", "diegomontana@gmail.com", 2));
 
 			News new3 = new News();
 			new3.setTitle("los programadores java son mas felices");
