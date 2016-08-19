@@ -11,3 +11,6 @@ deploy:
   skip_cleanup: true
   api_key:
   - $heroku_api_key
+  on:
+    branch: master
+    condition: "$deploy = true"
