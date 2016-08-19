@@ -34,7 +34,7 @@ public class BlogView {
 	@Autowired
 	private INewsRepository newsPersistence;
 
-	@RequestMapping(value = "/blog", method = RequestMethod.GET)
+	@RequestMapping(value = {"/","/blog"}, method = RequestMethod.GET)
 	public ModelAndView blog() {
 
 		System.out.println("In the blog..............");
