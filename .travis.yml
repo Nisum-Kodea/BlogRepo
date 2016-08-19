@@ -10,4 +10,4 @@ deploy:
   app: obscure-taiga-95979
   skip_cleanup: true
   api_key:
-    secure: HEROKU_API_KEY
+  - $heroku_api_key
