@@ -7,3 +7,8 @@ before_install:
 
 script:
   - ./gradlew build
+
+deploy:
+  provider: heroku
+  app: blog-de-juan-153247293 # optional if it's the same as your repo name
+  api_key: heroku_key
