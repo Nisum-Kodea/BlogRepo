@@ -1,5 +1,5 @@
 package com.nisum.blog.application;
- 
+
 import com.nisum.blog.model.Author;
 import com.nisum.blog.model.News;
 import com.nisum.blog.persistance.INewsRepository;
@@ -8,19 +8,21 @@ import com.nisum.blog.rest.BlogController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
- 
+
 @SpringBootApplication
 //@ComponentScan(basePackageClasses = Controller.class)
 @ComponentScan(basePackages="com.nisum.blog")
 @EnableAutoConfiguration
 public class Application {
- 
+
     public static void main(String[] args) {
 
        SpringApplication.run(Application.class, args);
@@ -43,16 +45,16 @@ public class Application {
         return templateEngine;
     }
 
-	@Bean 
+	@Bean
 	public ThymeleafViewResolver thymeleafViewResolver() {
 		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
 		resolver.setTemplateEngine(templateEngine());
 		return resolver;
 	}
     */
-    
+
     /*
-    @Bean       
+    @Bean
     public InternalResourceViewResolver internalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("WEB-INF/pages/");
@@ -61,5 +63,5 @@ public class Application {
         return resolver;
     }
     */
- 
+
 }
